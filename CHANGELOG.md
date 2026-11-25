@@ -21,6 +21,20 @@
   - Live-togglable in **`F1 -> Screen & Layout`** and `recomplauncher.json` (`dos_true_widescreen`, default `false`).
   - Expands *Castlevania: Dawn of Sorrow (USA ACVE)*'s hybrid 3D-ortho BG0 + hardware 2D BG2 (`64×32` 512px tilemap) + camera centering/clamping (`0x020F7098`) to true `342×192` (`16:9`, zero sprite stretching) in multi-screen rooms (`g_state[0x08] == 0x02` and `width_screens >= 2`), while keeping the HP/MP HUD unsplit at top-left (`center_width = 8`) and automatically letterboxing to native `256×192` on title screens, prologues, pause/equip menus, and single-screen/Save rooms.
 
+## [1.2.0](https://github.com/Neguchads/cdos-nintendods-recomp/compare/v1.1.2...v1.2.0) (2026-11-25)
+
+
+### Features
+
+* **display-graphics:** expanded display controls and 80-byte GPU post-process shader suite ([#33](https://github.com/Neguchads/cdos-nintendods-recomp/issues/33)) ([3676bd7](https://github.com/Neguchads/cdos-nintendods-recomp/commit/3676bd7ce0fcf48d2c66803828e92300baceb9cd))
+* **graphics-widescreen:** seamless True 2D Widescreen & curated linear-light upscalers ([#34](https://github.com/Neguchads/cdos-nintendods-recomp/issues/34)) ([da00e09](https://github.com/Neguchads/cdos-nintendods-recomp/commit/da00e098762c7e4030bc1ce6c032ed0900e63679))
+* **video-widescreen:** Sharp/Bandlimited GPU shaders & opt-in True 2D Widescreen 342x192 ([#31](https://github.com/Neguchads/cdos-nintendods-recomp/issues/31)) ([ae19265](https://github.com/Neguchads/cdos-nintendods-recomp/commit/ae1926529b657e8036b6e4736fb2297c4fbc95dc))
+
+
+### Bug Fixes
+
+* **widescreen:** wrap 1-screen 3D parallax sky backdrops in 342x192 rooms ([#32](https://github.com/Neguchads/cdos-nintendods-recomp/issues/32)) ([1f771da](https://github.com/Neguchads/cdos-nintendods-recomp/commit/1f771da90effe4de9d5deba0822febd2e3cea173))
+
 ## 1.1.2 (2026-11-24)
 
 ### Security & Release Hardening
